@@ -2,12 +2,11 @@ package za.ac.cput.domain;
 
 public class Admin {
 
-    private final String id;
-    private final String role;
+    private String id;
+    private  String role;
 
-    public Admin() {
-        this.id = "";
-        this.role = "";
+    private Admin() {
+
     }
 
     private Admin(Builder builder) {
@@ -23,36 +22,33 @@ public class Admin {
         return role;
     }
 
-    public boolean login() {
 
-        return true;
+    @Override
+    public String toString() {
+        return "==Admin Details=={" +
+                "\nId='" + id +
+                "\nRole='" + role +
+                '}';
     }
-
-    public void viewStudents() {
-
-    }
-
-    public void viewTutors() {
-
-    }
-
-    public void viewSubjects() {
-
-    }
-
 
     public static class Builder {
 
         private String id;
         private String role;
 
-        public Builder id(String id) {
+        public Builder setId(String id) {
             this.id = id;
             return this;
         }
 
-        public Builder role(String role) {
+        public Builder setRole(String role) {
             this.role = role;
+            return this;
+        }
+
+        public Builder copy(Admin admin) {
+            this.id = admin.id;
+            this.role = admin.role;
             return this;
         }
 
@@ -61,11 +57,5 @@ public class Admin {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Admin{" +
-                "id='" + id + '\'' +
-                ", role='" + role + '\'' +
-                '}';
-    }
+
 }
