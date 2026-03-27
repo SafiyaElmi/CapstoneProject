@@ -1,3 +1,2 @@
-[TUTORING SERVICES UML.pdf](https://github.com/user-attachments/files/26307169/TUTORING.SERVICES.UML.pdf)
 ## TUTORING SERVICES UML
-![TUTORING SERVICES UML]()
+![TUTORING SERVICES UML](https://github.com/sabelo-ceza-26/CapstoneProject/blob/main/TUTORING%20SERVICES.png)
