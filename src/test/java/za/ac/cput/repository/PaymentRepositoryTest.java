@@ -11,7 +11,7 @@ PaymentRepositoryTest.java
 Payment repository testing
 Author: Safiya Elmi
 (240500598)
-Date: 25/03/2026
+Date: 11/05/2026
 */
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
@@ -24,7 +24,9 @@ class PaymentRepositoryTest {
             1500.00,
             "2026-03-25",
             "Card",
-            "Completed"
+            "Completed",
+            "TRX001",
+            "BOOK001"
     );
 
     @Test
@@ -45,8 +47,8 @@ class PaymentRepositoryTest {
     void c_update() {
         Payment newRecord = new Payment.Builder()
                 .copy(payment)
-                .setAmount(2000.00)           
-                .setStatus("Pending")        
+                .setAmount(2000.00)
+                .setStatus("Pending")
                 .build();
 
         Payment updated = repository.update(newRecord);
@@ -55,7 +57,7 @@ class PaymentRepositoryTest {
     }
 
     @Test
-    @Disabled 
+    @Disabled
     void d_delete() {
         assertTrue(repository.delete(payment.getPaymentRef()));
         System.out.println("Payment has been successfully deleted");
