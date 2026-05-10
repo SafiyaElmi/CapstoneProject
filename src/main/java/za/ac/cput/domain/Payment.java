@@ -5,7 +5,7 @@ Payment.java
 Payment domain class
 Author: Safiya Elmi
 (240500598)
-Date: 22 March 2026
+Date: 11 May 2026
 */
 
 public class Payment {
@@ -14,6 +14,8 @@ public class Payment {
     private String paymentDate;
     private String paymentMethod;
     private String status;
+    private String transactionId;
+    private String bookingId;
 
     private Payment() {
     }
@@ -24,13 +26,15 @@ public class Payment {
         this.paymentDate = builder.paymentDate;
         this.paymentMethod = builder.paymentMethod;
         this.status = builder.status;
+        this.transactionId = builder.transactionId;
+        this.bookingId = builder.bookingId;
     }
 
     public String getPaymentRef() {
         return paymentRef;
     }
 
-    public double getAmount() { 
+    public double getAmount() {
         return amount;
     }
 
@@ -46,6 +50,32 @@ public class Payment {
         return status;
     }
 
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public String getBookingId() {
+        return bookingId;
+    }
+
+    public void makePayment() {
+    }
+
+    public String paymentConfirmation() {
+        return "Payment confirmed";
+    }
+
+    public void cancelPayment() {
+    }
+
+    public String refundPayment() {
+        return "Refund successful";
+    }
+
+    public boolean isPaid() {
+        return "Paid".equalsIgnoreCase(status);
+    }
+
     @Override
     public String toString() {
         return "==Payment Details==" +
@@ -53,22 +83,26 @@ public class Payment {
                 "\nAmount: " + amount +
                 "\nPayment Date: " + paymentDate +
                 "\nPayment Method: " + paymentMethod +
-                "\nStatus: " + status;
+                "\nStatus: " + status +
+                "\nTransaction ID: " + transactionId +
+                "\nBooking ID: " + bookingId;
     }
 
     public static class Builder {
         private String paymentRef;
-        private double amount;  
+        private double amount;
         private String paymentDate;
         private String paymentMethod;
         private String status;
+        private String transactionId;
+        private String bookingId;
 
         public Builder setPaymentRef(String paymentRef) {
             this.paymentRef = paymentRef;
             return this;
         }
 
-        public Builder setAmount(double amount) {  
+        public Builder setAmount(double amount) {
             this.amount = amount;
             return this;
         }
@@ -88,12 +122,25 @@ public class Payment {
             return this;
         }
 
+        public Builder setTransactionId(String transactionId) {
+            this.transactionId = transactionId;
+            return this;
+        }
+
+        public Builder setBookingId(String bookingId) {
+            this.bookingId = bookingId;
+            return this;
+        }
+
         public Builder copy(Payment payment) {
             this.paymentRef = payment.paymentRef;
             this.amount = payment.amount;
             this.paymentDate = payment.paymentDate;
             this.paymentMethod = payment.paymentMethod;
             this.status = payment.status;
+            this.transactionId = payment.transactionId;
+            this.bookingId = payment.bookingId;
+
             return this;
         }
 
