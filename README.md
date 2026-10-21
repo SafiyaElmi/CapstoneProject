@@ -1,20 +1,20 @@
 # Introduction
 
-Tutoring Booking Service is a digital platform designed to connect university students with qualified tutors foe academic support.
-Many students struggle to find reliable tutors and book sessions without long whatsapp chains and missed messages.This service solves
+Tutoring Booking Service is a digital platform designed to connect university students with qualified tutors for academic support.
+Many students struggle to find reliable tutors and book sessions without long WhatsApp chains and missed messages. This service 
 solves that by allowing students to connect with available tutors, view subjects, check time slots and book tutoring sessions online in minutes.
 
-The main goal is to make academic support more accessible, organized and stress-free for students while giving tutorss a simple way to manage their bookings, students and payments all in one secured place.
+The main goal is to make academic support more accessible, organized and stress-free for students while giving tutors a simple way to manage their bookings, students and payments all in one secure place.
 
 ---
 
 # Objectives
 
-- Simplify Booking: Allow students to search, book, pay for tutoring sessions efectively.
-- Connect Students and Tutours: Match students with qualified tutors for their desired modules.
-- Manage Schedules: Allow both students and tutors to have access to a clear calender to avoid clashes and missed sessions.
+- Simplify Booking: Allow students to search, book, pay for tutoring sessions effectively.
+- Connect Students and Tutors: Match students with qualified tutors for their desired modules.
+- Manage Schedules: Allow both students and tutors to have access to a clear calendar to avoid clashes and missed sessions.
 - Increase Access: To make tutoring available to students anytime, anywhere even after school hours.
-- Improves Results: To help studentd get academic support faster so they can improve their marks.
+- Improves Results: To help students get academic support faster so they can improve their marks.
 - Reduce No-Shows: Send automatic reminders to students and tutors before a session
 - Build Trust: Allow students to rate and review tutors.
 ---
@@ -47,16 +47,16 @@ The main goal is to make academic support more accessible, organized and stress-
 
 # Constraints and Assumptions
 
-Contraints
+Constraints
 - Each Student, Tutor, Booking and payment must have a unique identifier
 - A booking can only be created if both the student and tutor exist
-- All data is tored in a relational database using JPA
-- The system is developed using SPring Boot and follows a layered architecture (Controller, Service, Repository and Domain)
+- All data is stored in a relational database using JPA
+- The system is developed using Spring Boot and follows a layered architecture (Controller, Service, Repository and Domain)
 
 Assumptions
-- Users provide accurate and complete informationduring registration and booking
+- Users provide accurate and complete information during registration and booking
 - Tutors are available for the time slots selected by students
-- The database is running and properly confiqured before the application starts
+- The database is running and properly configured before the application starts
 - The application is used in a secure environment where user credentials are kept confidential 
 ---
 
@@ -65,6 +65,6 @@ Assumptions
 - Students can successfully create and manage tutoring session bookings
 - Tutors can be registered and managed within the system
 - Administrators can perform Create, Read, Update and Delete operations on all entities
-- Booking information is stored and retrieved frpm database using JPA
+- Booking information is stored and retrieved from database using JPA
 - Relationships between Students, Tutors, Bookings and Payments are maintained correctly
-- The system provides a reliable and user friendly backend fr managing tutoring services
+- The system provides a reliable and user-friendly backend for managing tutoring services
