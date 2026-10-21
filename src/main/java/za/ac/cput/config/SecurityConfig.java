@@ -1,4 +1,3 @@
-
 package za.ac.cput.config;
 
 import org.springframework.context.annotation.Bean;
